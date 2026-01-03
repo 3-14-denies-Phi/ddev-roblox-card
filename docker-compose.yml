@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  ddev-roblox-card-bot:
+    image: ddev-roblox-card-bot
+    container_name: ddev-roblox-card-bot
+    restart: always
+    environment:
+      - DOTENV_CONFIG_QUIET
+      - TOKEN
+      - CLIENT_ID

@@ -1,0 +1,35 @@
+name: Docker Build Workflow
+
+on:
+  push:
+    branches: [host]
+  pull_request:
+    branches: [host]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Build Docker image
+        run: |
+          echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S DOCKER_BUILDKIT=1 docker build -t ddev-roblox-card-bot .
+
+      - name: Run Docker Compose
+        env:
+          DOTENV_CONFIG_QUIET: ${{ secrets.DOTENV_CONFIG_QUIET }}
+          TOKEN: ${{ secrets.TOKEN }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+        run: |
+          # Run the Docker Compose with branch-specific service
+          # -E preserves the environment variables so they are passed to the container
+          echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S -E docker compose up -d --force-recreate
+
+      - name: Run Docker Image Prune
+        run: |
+          echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker image prune -f
