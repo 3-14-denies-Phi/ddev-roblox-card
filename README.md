@@ -28,8 +28,8 @@ Follow these steps to get your own app running.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/imsoondae/DDEVS-Card.git
-   cd DDEVS-Card
+   git clone https://github.com/3-14-denies-Phi/ddev-roblox-card
+   cd ddev-roblox-card
    ```
 
 2. **Install dependencies**

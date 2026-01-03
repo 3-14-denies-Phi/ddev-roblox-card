@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imsoondae/DDEVS-Card.git"
+    "url": "git+https://github.com/3-14-denies-Phi/ddev-roblox-card"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/imsoondae/DDEVS-Card/issues"
+    "url": "https://github.com/3-14-denies-Phi/ddev-roblox-card/issues"
   },
-  "homepage": "https://github.com/imsoondae/DDEVS-Card#readme",
+  "homepage": "https://github.com/3-14-denies-Phi/ddev-roblox-card#readme",
   "dependencies": {
     "axios": "^1.13.2",
     "canvas": "^3.2.0",
