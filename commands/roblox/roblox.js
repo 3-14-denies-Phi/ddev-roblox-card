@@ -285,7 +285,7 @@ module.exports = {
             if (user.hasVerifiedBadge) {
                 try {
                     // NOTE: Ensure this path is correct relative to where the bot runs
-                    const verifiedBadge = await loadImage("./src/assets/roblox/badge_verified.png");
+                    const verifiedBadge = await loadImage("./assets/badge_verified.png");
                     ctx.drawImage(verifiedBadge, badgeIconX, badgeIconY, badgeSize, badgeSize);
                 } catch (e) {
                     // console.error("Verified badge load failed:", e);
