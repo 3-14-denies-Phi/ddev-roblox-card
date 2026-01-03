@@ -15,6 +15,13 @@
 - **Library**: Discord.js (v14.25.1)
 - **License**: MIT
 
+## Preview
+
+<p align="center">
+  <img src="assets/example-user-1.png" width="450">
+  <img src="assets/example-user-2.png" width="450">
+</p>
+
 ## Getting Started
 
 Follow these steps to get your own app running.
